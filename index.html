@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Farkel</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Farkel</h1>
+      <div class="btnContainer">
+        <button onclick="reset()">New Game</button>
+      </div>
+
+      <div class="totalRow">
+        <div class="scoreboard" id="playerOneScoreboard">
+          <h3>Player One:</h3>
+          <p id="playerOneScore">0</p>
+        </div>
+
+        <div class="scoreboard" id="playerTwoScoreboard">
+          <h3>Player Two:</h3>
+          <p id="playerTwoScore">0</p>
+        </div>
+      </div>
+
+      <div id="rollArea">
+        <h4 id="turnBanner">Player One's Turn</h4>
+        <h4 id="rollScore"></h4>
+        <div class="diceStack">
+          <div class="die" id="die1"></div>
+          <div class="die" id="die2"></div>
+          <div class="die" id="die3"></div>
+          <div class="die" id="die4"></div>
+          <div class="die" id="die5"></div>
+        </div>
+      </div>
+      <div class="btnContainer">
+        <button onclick="roll()">Roll</button>
+      </div>
+    </div>
+
+    <style>
+      body {
+        background-color: rgb(67, 243, 67);
+      }
+      h1 {
+        color: blue;
+        text-align: center;
+      }
+
+      h4 {
+        text-align: center;
+      }
+
+      p {
+        text-align: center;
+      }
+
+      button {
+        height: 3.5rem;
+        width: 7rem;
+        border-width: 1rem;
+        margin: 2rem;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .totalRow {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+      }
+
+      .scoreboard {
+        width: 8rem;
+        background-color: gray;
+        padding: 10px;
+        border-radius: 15%;
+        border: 3px;
+        border-style: solid;
+      }
+
+      .diceStack {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      .die {
+        height: 50px;
+        width: 50px;
+        margin: 10px;
+        border-radius: 15%;
+        border: 3px;
+        border-style: solid;
+        border-color: black;
+        background-color: antiquewhite;
+        text-align: center;
+        vertical-align: middle;
+      }
+
+      #rollArea {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .btnContainer {
+        display: flex;
+        justify-content: center;
+      }
+    </style>
+    <script src="diceGame.js" />
+  </body>
+</html>
